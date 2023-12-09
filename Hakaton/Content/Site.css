@@ -1,29 +1,123 @@
-﻿/* Move down content because we have a fixed navbar that is 50px tall */
+﻿@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+
 body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   
 }
 
-/* Wrapping element */
-/* Set some basic padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+li {
+    list-style: none;
 }
 
-/* Set widths on the form inputs since otherwise they're 100% wide */
-input,
-select,
-textarea {
-    max-width: 280px;
+a {
+    text-decoration: none;
+    color: #fff;
 }
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-    .jumbotron {
-        margin-top: 20px;
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #F0F0F0;
+    width: 80%;
+    height: 8vh;
+    margin: auto;
+    padding: 0 0 0 20px;
+    border-radius: 30px;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    margin: 0;
+}
+
+    nav ul li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 8vh;
     }
-    .body-content {
-        padding: 0;
+
+    nav ul li a {
+        padding: 20px 30px
     }
+
+    nav ul li a:hover {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .sign-in:hover {
+        color: #E5B031;
+    }
+
+.sign-up {
+    background: #E5B031;
+    border-radius: 30px;
+    color: #fff;
+}
+
+.sign-up:hover {
+    opacity: 0.8;
+}
+
+.sign-in {
+    color: #E5B031;
+}
+
+
+
+.hero-section {
+    background-color: rgba(0, 0, 0, 0.5);
+    background-image: url("Images/heroimg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-blend-mode: darken;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align:center;
+}
+
+.hero-section h1 {
+    font-size: 128px;
+    max-width: 600px;
+    color: #fff;
+    line-height: 90%;
+}
+
+.hero-section p {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.cta-btn {
+    background: #E5B031;
+    font-size: 20px;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 30px;
+    appearance: none;
+    border: none;
+    transition: 0.2s all;
+}
+
+.cta-btn:hover {
+    opacity: 0.8;
+    transition: 0.2s all;
+}
+
+.hero-section .cta-btn {
+    margin-top: 20px;
 }
